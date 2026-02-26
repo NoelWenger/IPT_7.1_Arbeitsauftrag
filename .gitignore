@@ -1,7 +1,10 @@
-# Node.js
+# Node
 node_modules/
 npm-debug.log
 yarn-error.log
+
+# Vite / Build
+dist/
 
 # WebStorm / IntelliJ
 .idea/
