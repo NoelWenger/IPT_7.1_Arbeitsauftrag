@@ -1,10 +1,29 @@
 {
-  "name": "IPT_7.1_Arbeitsauftrag",
+  "name": "ipt_7.1_arbeitsauftrag",
   "version": "1.0.0",
-  "description": "",
+  "description": "Registration, Login und Logout mit bestehendem Backend",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NoelWenger/IPT_7.1_Arbeitsauftrag.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NoelWenger/IPT_7.1_Arbeitsauftrag/issues"
+  },
+  "homepage": "https://github.com/NoelWenger/IPT_7.1_Arbeitsauftrag#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "vue": "^3.5.29",
+    "vue-router": "^4.6.4"
+  }
 }
