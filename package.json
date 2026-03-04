@@ -1,29 +1,18 @@
 {
-  "name": "ipt_7.1_arbeitsauftrag",
-  "version": "1.0.0",
-  "description": "Registration, Login und Logout mit bestehendem Backend",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "besmart-frontend",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NoelWenger/IPT_7.1_Arbeitsauftrag.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/NoelWenger/IPT_7.1_Arbeitsauftrag/issues"
-  },
-  "homepage": "https://github.com/NoelWenger/IPT_7.1_Arbeitsauftrag#readme",
-  "devDependencies": {
-    "vite": "^7.3.1"
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.5.29",
-    "vue-router": "^4.6.4"
+    "vue": "^3.5.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.2",
+    "vite": "^7.3.1"
   }
 }

@@ -1,15 +1,28 @@
 # Node
 node_modules/
-npm-debug.log
-yarn-error.log
+npm-debug.log*
+yarn-error.log*
 
 # Vite / Build
 dist/
+.vite/
+.vite-temp/
+
+# Logs
+*.log
 
 # WebStorm / IntelliJ
 .idea/
 *.iml
 
+# VSCode
+.vscode/
+
 # Betriebssystem
 .DS_Store
 Thumbs.db
+
+# Optional: Environment / Secrets
+.env
+.env.local
+.env.*.local
