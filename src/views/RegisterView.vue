@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h2>Registration</h2>
-
+    <h2>Registrierung</h2>
     <form @submit.prevent="handleRegister">
       <input v-model="form.username" type="email" placeholder="E-Mail" required />
       <input v-model="form.firstname" type="text" placeholder="Vorname" required />
@@ -14,6 +13,7 @@
         <option value="fr">Français</option>
       </select>
 
+      <div v-if="error" class="error">{{ error }}</div>
       <button type="submit">Registrieren</button>
     </form>
 
@@ -33,14 +33,21 @@ export default {
         lastname: "",
         password: "",
         language: "de"
-      }
+      },
+      error: ""
     }
   },
   methods: {
     async handleRegister() {
+      this.error = ""
 
       if (this.form.password.length < 6) {
-        alert("Passwort mindestens 6 Zeichen!")
+        this.error = "Passwort muss mindestens 6 Zeichen haben"
+        return
+      }
+
+      if (!this.form.username.match(/^\S+@\S+\.\S+$/)) {
+        this.error = "Bitte gültige E-Mail eingeben"
         return
       }
 
@@ -50,7 +57,7 @@ export default {
         alert("Registrierung erfolgreich")
         this.$router.push("/")
       } else {
-        alert("Registrierung fehlgeschlagen")
+        this.error = "Registrierung fehlgeschlagen"
       }
     }
   }

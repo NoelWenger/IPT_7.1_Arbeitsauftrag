@@ -1,13 +1,12 @@
 <template>
   <div class="container">
     <h2>Login</h2>
-
     <form @submit.prevent="handleLogin">
-      <input v-model="username" type="email" required />
-      <input v-model="password" type="password" required />
+      <input v-model="username" type="email" placeholder="E-Mail" required />
+      <input v-model="password" type="password" placeholder="Passwort" required />
+      <div v-if="error" class="error">{{ error }}</div>
       <button type="submit">Login</button>
     </form>
-
     <router-link to="/register">Registrieren</router-link>
   </div>
 </template>
@@ -19,11 +18,13 @@ export default {
   data() {
     return {
       username: "",
-      password: ""
+      password: "",
+      error: ""
     }
   },
   methods: {
     async handleLogin() {
+      this.error = ""
       const response = await login({
         username: this.username,
         password: this.password
@@ -32,7 +33,7 @@ export default {
       if (response.ok) {
         this.$router.push("/products")
       } else {
-        alert("Login fehlgeschlagen")
+        this.error = "Login fehlgeschlagen. Prüfen Sie Benutzername/Passwort."
       }
     }
   }
